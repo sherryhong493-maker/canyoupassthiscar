@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://canyoupassthiscar.sherryhong493.workers.dev">
 <meta property="og:title" content="Can You Pass This Car?">
-<meta property="og:description" content="An LA freeway commute simulator. There's a slow car ahead, do you pass it?">
+<meta property="og:description" content="An LA freeway commute simulator. There's a slow car ahead — do you pass it?">
 <meta property="og:image" content="https://canyoupassthiscar.sherryhong493.workers.dev/cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -264,15 +264,6 @@
   .choice-btn.pass:hover { background: var(--black); color: var(--white); }
   .choice-btn:disabled { opacity: 0.2; cursor: default; background: var(--white) !important; color: var(--black) !important; }
 
-  .btn-sub {
-    display: block;
-    font-family: 'VT323', monospace;
-    font-size: 14px;
-    color: var(--gray2);
-    margin-top: 8px;
-    font-weight: 400;
-  }
-
   .event-box {
     padding: 18px 20px;
     display: flex;
@@ -423,7 +414,6 @@
 
     /* Larger tap targets for choice buttons */
     .choice-btn { padding: 22px 16px 18px; font-size: 16px; }
-    .btn-sub { font-size: 16px; }
 
     /* Bigger prompt */
     .prompt-question { font-size: 42px; }
@@ -508,11 +498,9 @@
       <div class="choice-btns">
         <button class="choice-btn pass" id="btn-pass" onclick="makeChoice('pass')">
           <span id="pass-lbl">PASS</span>
-          <span class="btn-sub" id="pass-sub">超</span>
         </button>
         <button class="choice-btn stay" id="btn-stay" onclick="makeChoice('stay')">
           <span id="stay-lbl">STAY</span>
-          <span class="btn-sub" id="stay-sub">不超</span>
         </button>
       </div>
 
@@ -651,9 +639,7 @@ function applyLang() {
   document.getElementById('car-prompt-lbl').textContent = lang==='en'?'CAR AHEAD':'前面有一辆车';
   document.getElementById('car-prompt-q').textContent   = lang==='en'?'PASS OR STAY?':'超还是不超？';
   document.getElementById('pass-lbl').textContent = lang==='en'?'PASS':'超';
-  document.getElementById('pass-sub').textContent = lang==='en'?'超':'PASS';
   document.getElementById('stay-lbl').textContent = lang==='en'?'STAY':'不超';
-  document.getElementById('stay-sub').textContent = lang==='en'?'不超':'STAY';
   document.getElementById('next-lbl').textContent = lang==='en'?'NEXT CAR':'下一辆车';
   document.getElementById('restart-lbl').textContent = lang==='en'?'↩ RESTART':'↩ 重来一局';
   document.getElementById('replay-lbl').textContent = lang==='en'?'PLAY AGAIN':'再来一次';
